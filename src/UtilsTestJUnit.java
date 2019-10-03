@@ -1,7 +1,6 @@
 import org.junit.*;
 import java.util.Arrays;
 
-
 public class UtilsTestJUnit {
 
     Utils utils;
@@ -39,29 +38,29 @@ public class UtilsTestJUnit {
     @Test
     public void toArrayEmptyString() {
         String[] expectedResult = new String[] {};
-        Assert.assertTrue(Arrays.equals(expectedResult, utils.toArray("", ' ')));
+        Assert.assertTrue(Utils.toArray("", ' ').length == 0);
     }
 
     @Test
     public void toArraySpace() {
         String[] expectedResult = new String[] {"Hello,", "how", "are", "you?"};
-        Assert.assertTrue(Arrays.equals(expectedResult, utils.toArray("Hello, how are you?", ' ')));
+        Assert.assertTrue(Arrays.equals(expectedResult, Utils.toArray("Hello, how are you?", ' ')));
     }
 
     @Test
     public void toArrayTab() {
         String[] expectedResult = new String[] {"a", "b", "c", "d"};
-        Assert.assertTrue(Arrays.equals(expectedResult, utils.toArray("a\tb\tc\td", '\t')));
+        Assert.assertTrue(Arrays.equals(expectedResult, Utils.toArray("a\tb\tc\td", '\t')));
     }
 
     @Test
     public void isEmptyTrue() {
-        Assert.assertEquals(true, utils.isEmpty(""));
+        Assert.assertTrue(utils.isEmpty(""));
     }
 
     @Test
     public void isEmptyFalse() {
-        Assert.assertEquals(false, utils.isEmpty("Not empty string"));
+        Assert.assertFalse(utils.isEmpty("Not empty string"));
     }
 
     @Test
