@@ -1,7 +1,6 @@
 public class Utils {
 
     public static void main(String[] args) {
-        Utils utils = new Utils();
         System.out.println("Utils works!");
     }
 
@@ -26,4 +25,22 @@ public class Utils {
         }
     }
 
+    public static String[] toArray(final String source, final char delimiter) {
+        if (source.isEmpty()) {
+            return new String[]{};
+        }
+        return source.split(String.valueOf(delimiter));
+    }
+
+    public String toString(final double number) {
+        return "" + number;
+    }
+
+    public double toDouble(final String subject) {
+        return Double.parseDouble(subject);
+    }
+
+    public boolean isEmpty(final String subject) {
+        return subject.isEmpty();
+    }
 }
