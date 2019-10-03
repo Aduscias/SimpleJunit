@@ -1,4 +1,8 @@
-import org.junit.*;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.Arrays;
 
 public class UtilsTestJUnit {
@@ -37,19 +41,19 @@ public class UtilsTestJUnit {
 
     @Test
     public void toArrayEmptyString() {
-        String[] expectedResult = new String[] {};
-        Assert.assertTrue(Utils.toArray("", ' ').length == 0);
+        String[] expectedResult = new String[]{};
+        Assert.assertEquals(0, Utils.toArray("", ' ').length);
     }
 
     @Test
     public void toArraySpace() {
-        String[] expectedResult = new String[] {"Hello,", "how", "are", "you?"};
+        String[] expectedResult = new String[]{"Hello,", "how", "are", "you?"};
         Assert.assertTrue(Arrays.equals(expectedResult, Utils.toArray("Hello, how are you?", ' ')));
     }
 
     @Test
     public void toArrayTab() {
-        String[] expectedResult = new String[] {"a", "b", "c", "d"};
+        String[] expectedResult = new String[]{"a", "b", "c", "d"};
         Assert.assertTrue(Arrays.equals(expectedResult, Utils.toArray("a\tb\tc\td", '\t')));
     }
 
