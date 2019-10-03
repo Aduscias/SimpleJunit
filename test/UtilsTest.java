@@ -5,7 +5,6 @@ public class UtilsTest {
         divisionTest(3, 2, (float)1.5);
         divisionTest(3, 0, Float.NaN);
         factorialTest(5, 120);
-//        factorialTest(-3, 0);
     }
 
     private static void plusTest(int number1, int number2, int etalonResult) {
