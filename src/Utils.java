@@ -6,7 +6,7 @@ public class Utils {
     }
 
     private int plus(int number1,int number2){
-        return number1+number2;
+        return number1+number2+number1;
     }
 
     private float division(float number1,float number2){
